@@ -1,5 +1,6 @@
 import Character from "@/components/character/Character";
 import HabitList from "@/components/habits/HabitList";
+import AuthGuard from "@/guards/auth.guard";
 
 const HABITS_STUB = [
   {
@@ -18,11 +19,11 @@ const HABITS_STUB = [
 
 export default function Home() {
   return (
-    <>
+    <AuthGuard>
       <Character />
       <div className="mt-4">
         <HabitList initialHabits={HABITS_STUB} />
       </div>
-    </>
+    </AuthGuard>
   );
 }

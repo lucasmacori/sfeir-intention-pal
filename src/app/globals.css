@@ -120,3 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-sfeir-blue {
+  background-color: #8DC0E3;
+}

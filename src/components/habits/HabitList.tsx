@@ -20,7 +20,6 @@ const HabitList: React.FC<HabitListProps> = ({
   const [habits, setHabits] = useState(initialHabits);
 
   const handleHabitCheck = (habit: HabitType) => {
-    console.log("Oh yeah");
     setHabits((habits: HabitType[]) => habits.map((currentHabit: HabitType) => (
       currentHabit.id === habit.id ? { ...currentHabit, done: !currentHabit.done } : currentHabit
     )));
